@@ -115,3 +115,8 @@ body {
 </style>
 """, unsafe_allow_html=True)
 
+    color: #FFD700;  /* Gold color for headers */
+}
+</style>
+""", unsafe_allow_html=True)
+
