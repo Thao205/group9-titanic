@@ -1,1 +1,11 @@
-streamlit==1.26.0
+os
+pickle
+pandas
+streamlit
+numpy
+sklearn
+plotly
+PIL
+base64
+matplotlib
+seaborn
