@@ -11,7 +11,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
 # Load the dataset
-train = pd.read_csv('/workspaces/group9-titanic/Titanic.csv')
+train = pd.read_csv('Titanic.csv')
 notebook_config = {  
     'random_state': 12345,  # for the GradientBoostingClassifier
     'n_jobs': 1 ,           # for the cross_val_score
@@ -140,14 +140,14 @@ def main():
     st.title(f'{prob}% chance to survive! {emojis[state]}')
     if state == 0:
         st.error("Good luck next time, you will be next Jack! ☠️")
-        st.image('/workspaces/group9-titanic/image copy 7.png')
+        st.image('image_copy_7.png')
     elif state == 1:
         st.warning("Hey... I hope you know how to swim, maybe you have to do it! 🏊‍♂️")
     elif state == 2:
         st.info("Well done! You are on the right track, but don't get lost! 💪")
     else:
         st.success('Congratulations! You can rest assured, you will be fine! 🤩')
-        st.image('/workspaces/group9-titanic/image copy 6.png')
+        st.image('image_copy_6.png')
 
     if st.button("Facts"):
         st.markdown("""
