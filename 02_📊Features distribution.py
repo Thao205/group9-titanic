@@ -19,11 +19,11 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Set the background image
-set_background('/workspaces/group9-titanic/image copy.png')
+set_background('image_copy.png')
 # Load the Titanic dataset from the workspace directory
 @st.cache_data  # Cache the dataset for improved performance
 def load_data():
-    return pd.read_csv('/workspaces/group9-titanic/Titanic.csv')
+    return pd.read_csv('Titanic.csv')
 
 # Visualize the survival distribution
 def visualize_survival_distribution(df):
@@ -104,9 +104,6 @@ def visualize_family_size_distribution(df):
     st.plotly_chart(fig_family_size)
 
 def visualize_class_distribution(df):
-    # Add a reset button
-    if st.button("Reset Plot"):
-        st.experimental_rerun()
     
     # Add checkboxes for filtering by Sex
     selected_sex = st.multiselect("Select Sex", df['Sex'].unique(), default=df['Sex'].unique())
