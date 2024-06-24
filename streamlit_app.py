@@ -21,7 +21,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Set the background image
-set_background('/workspaces/group9-titanic/image copy 4.png')
+set_background('image_copy_4.png')
 
 # Initialize session state
 if 'page' not in st.session_state:
@@ -56,7 +56,7 @@ def cover_page():
 # Load the Titanic dataset from the workspace directory
 @st.cache_data  # Cache the dataset for improved performance
 def load_data():
-    Titanic = pd.read_csv('/workspaces/group9-titanic/Titanic.csv')
+    Titanic = pd.read_csv('Titanic.csv')
     return Titanic
 
 # Function to display the main app content
